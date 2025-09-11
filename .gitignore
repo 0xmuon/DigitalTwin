@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Environment & credentials
+.env
+.env.*
+creds.json
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Vercel local state
+.vercel/
+
+# Cache/build outputs (if added later)
+dist/
+build/
+.tmp/
+.parcel-cache/
