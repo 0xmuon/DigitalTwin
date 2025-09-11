@@ -13,23 +13,11 @@
 	</header>
 
 	<section class="controls">
-		<div class="control-group">
-			<label for="range">Range (A1 notation)</label>
-			<input id="range" type="text" placeholder="Sheet1!A1:E50" value="Sheet1!A1:E50" autocomplete="off">
-		</div>
-		<div class="control-group">
-			<label for="intervalSec">Refresh every (seconds)</label>
-			<input id="intervalSec" type="number" min="1" step="1" value="1">
-		</div>
-		<div class="buttons">
-			<button id="saveConfig">Save</button>
-			<button id="refreshNow">Refresh now</button>
-		</div>
-		<p class="note">Backend mode: This app reads a private Google Sheet via a secured server endpoint. Configure your `SHEET_ID` and `creds.json` on the server. URL params supported: <code>?range=Sheet1!A1:E50&interval=1</code>.</p>
+		<p class="note">Live mode: Reading private Google Sheet via secure backend. Polling every 5 seconds.</p>
 	</section>
 
 	<section class="status-bar">
-		<div id="status">Waiting for configuration…</div>
+		<div id="status">Initializing…</div>
 		<div id="lastUpdated"></div>
 	</section>
 
