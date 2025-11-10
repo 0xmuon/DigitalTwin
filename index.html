@@ -23,35 +23,51 @@
 
 	<main>
 		<section class="dashboard">
-			<div class="gauge-card">
-				<h2>SOC</h2>
-				<canvas id="socGauge" width="240" height="140"></canvas>
-				<div class="gauge-label"><span id="socVal">--%</span></div>
-				<div class="mini-list">
-					<div>SOC_cc: <strong id="socCcVal">--%</strong></div>
-					<div>SOC_model: <strong id="socModelVal">--%</strong></div>
+			<!-- SOC Row -->
+			<div class="chart-row">
+				<div class="gauge-card">
+					<h2>SOC</h2>
+					<canvas id="socGauge" width="240" height="140"></canvas>
+					<div class="gauge-label"><span id="socVal">--%</span></div>
+					<div class="mini-list">
+						<div>SOC_cc: <strong id="socCcVal">--%</strong></div>
+						<div>SOC_EKF: <strong id="socEkfVal">--%</strong></div>
+						<div>SOC_AI: <strong id="socAiVal">--%</strong></div>
+					</div>
 				</div>
 			</div>
-			<div class="stat-card">
-				<h3>Voltage</h3>
-				<div class="stat-value"><span id="voltVal">--</span> <span class="unit">V</span></div>
-				<div class="subtle">Model: <span id="voltModelVal">--</span> V</div>
-				<canvas id="voltSpark" width="320" height="120"></canvas>
+
+			<!-- Voltage Row -->
+			<div class="chart-row">
+				<div class="stat-card chart-card">
+					<h3>Voltage</h3>
+					<div class="stat-value"><span id="voltVal">--</span> <span class="unit">V</span></div>
+					<div class="subtle">Model: <span id="voltModelVal">--</span> V | V_RC_EKF: <span id="voltRcEkfVal">--</span> V</div>
+					<canvas id="voltSpark" width="900" height="220"></canvas>
+				</div>
 			</div>
-			<div class="stat-card">
-				<h3>Current</h3>
-				<div class="stat-value"><span id="currVal">--</span> <span class="unit">A</span></div>
-				<canvas id="currSpark" width="320" height="120"></canvas>
+
+			<!-- Current Row -->
+			<div class="chart-row">
+				<div class="stat-card chart-card">
+					<h3>Current</h3>
+					<div class="stat-value"><span id="currVal">--</span> <span class="unit">A</span></div>
+					<canvas id="currSpark" width="900" height="220"></canvas>
+				</div>
 			</div>
-			<div class="stat-card">
-				<h3>Temperature</h3>
-				<div class="stat-value"><span id="tempVal">--</span> <span class="unit">°C</span></div>
-				<canvas id="tempSpark" width="280" height="64"></canvas>
-			</div>
-			<div class="stat-card">
-				<h3>Status</h3>
-				<div class="stat-value"><span id="stateVal">--</span></div>
-				<div class="subtle">Timestamp: <span id="tsVal">--</span></div>
+
+			<!-- Temperature and Status Row -->
+			<div class="info-row">
+				<div class="stat-card">
+					<h3>Temperature</h3>
+					<div class="stat-value"><span id="tempVal">--</span> <span class="unit">°C</span></div>
+					<canvas id="tempSpark" width="280" height="64"></canvas>
+				</div>
+				<div class="stat-card">
+					<h3>Status</h3>
+					<div class="stat-value"><span id="stateVal">--</span></div>
+					<div class="subtle">Timestamp: <span id="tsVal">--</span></div>
+				</div>
 			</div>
 		</section>
 
